@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Django Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/resume_tool/manage.py",  // Path to manage.py
+            "args": ["runserver"],  // Command-line argument to start the server
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "resume_tool.settings"  // Replace with your settings module
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Run Django Server with Makefile",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/bin/make",  // Path to the make command
+            "args": ["run"],  // This corresponds to the `make run` command in the Makefile
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "resume_tool.settings"
+            },
+            "justMyCode": true
+        }
+    ]
+}
