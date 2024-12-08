@@ -11,8 +11,8 @@ migrate:
 	$(MANAGE) migrate
 
 # Make migrations
-makemigrations:
-	$(MANAGE) mm
+mm:
+	$(MANAGE) makemigrations
 
 # Collect static files
 collectstatic:
